@@ -12,7 +12,7 @@ function singleRound() {
     userChoice == "scissors" && computerChoice == "paper") {
         return `Congratulations ${userChoice} beat ${computerChoice}!`;
     } else if (computerChoice == userChoice) {
-        return `two ${userChoice} is a tie!`;
+        return "Tie!";
     } else {
         return `Bad luck ${computerChoice} beat ${userChoice}`;
     }
