@@ -18,5 +18,11 @@ function singleRound() {
     }
 
 }
+ 
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(singleRound());
+    }
+}
 
-console.log(singleRound());
+game();
