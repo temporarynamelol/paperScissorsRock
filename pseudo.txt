@@ -33,6 +33,8 @@ function oneRound() {
    }
 }
 
+
+
 function game() {
     for (let i = 1; i < 5; i++) {
         let result = oneRound();
@@ -52,5 +54,5 @@ Divide:
 
 sub problem 1 = how do I make a random string return in js? - solved using math.random to allocate random index.
 
-sub problem 2 = best way to compare user input with computer selection?
+sub problem 2 = best way to compare user input with computer selection? - solved with if else statement from pseudocode
 

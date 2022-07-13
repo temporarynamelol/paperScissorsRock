@@ -7,8 +7,17 @@ function singleRound() {
     let userChoice = prompt("Please enter rock, paper or scissors ");
     let computerChoice = computerPlay();
 
-    console.log(userChoice);
-    console.log(computerChoice);
+    if (userChoice == "paper" && computerChoice == "rock" || 
+    userChoice == "rock" && computerChoice == "scissors" ||
+    userChoice == "scissors" && computerChoice == "paper") {
+        return `Congratulations ${userChoice} beat ${computerChoice}!`;
+    } else if (computerChoice == userChoice) {
+        return `two ${userChoice} is a tie!`;
+    } else {
+        return `Bad luck ${computerChoice} beat ${userChoice}`;
+    }
+
+
 }
 
-singleRound();
+console.log(singleRound());
