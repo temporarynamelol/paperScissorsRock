@@ -4,7 +4,7 @@ function computerPlay() {
 }
 
 function singleRound() {
-    let userChoice = prompt("Please enter rock, paper or scissors ");
+    let userChoice = prompt("Please enter rock, paper or scissors ").toLowerCase();
     let computerChoice = computerPlay();
 
     if (userChoice == "paper" && computerChoice == "rock" || 
@@ -16,7 +16,6 @@ function singleRound() {
     } else {
         return `Bad luck ${computerChoice} beat ${userChoice}`;
     }
-
 
 }
 
