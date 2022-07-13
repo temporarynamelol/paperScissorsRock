@@ -3,4 +3,12 @@ function computerPlay() {
     return options[Math.floor(Math.random()*options.length)];
 }
 
-console.log(computerPlay());
+function singleRound() {
+    let userChoice = prompt("Please enter rock, paper or scissors ");
+    let computerChoice = computerPlay();
+
+    console.log(userChoice);
+    console.log(computerChoice);
+}
+
+singleRound();

@@ -49,3 +49,8 @@ function game() {
 }
 
 Divide:
+
+sub problem 1 = how do I make a random string return in js? - solved using math.random to allocate random index.
+
+sub problem 2 = best way to compare user input with computer selection?
+
