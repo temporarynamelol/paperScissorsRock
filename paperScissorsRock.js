@@ -10,19 +10,43 @@ function singleRound() {
     if (userChoice == "paper" && computerChoice == "rock" || 
     userChoice == "rock" && computerChoice == "scissors" ||
     userChoice == "scissors" && computerChoice == "paper") {
-        return `Congratulations ${userChoice} beat ${computerChoice}!`;
+        console.log(`Congratulations ${userChoice} beat ${computerChoice}!`);
+        return "Win"
     } else if (computerChoice == userChoice) {
-        return "Tie!";
+        console.log("Tie! - No winner for this round");
+        return "Tie";
     } else {
-        return `Bad luck ${computerChoice} beat ${userChoice}`;
+        console.log(`Bad luck ${computerChoice} beat ${userChoice}`);
+        return "Lose";
     }
 
 }
  
 function game() {
+    let j = 0;
+    let k = 0;
+
     for (let i = 0; i < 5; i++) {
-        console.log(singleRound());
+        let result = singleRound();
+
+        switch (result) {
+            case "Win":
+                j++;
+                break;
+            
+            case "Lose":
+                k++;
+                break;
+
+            case "Tie":
+                break;
+        }
     }
+
+   return j > k ?
+   "You won the best out of 5!":
+   "You lost the most rounds out of 5 :(";
 }
 
-game();
+
+console.log(game());
