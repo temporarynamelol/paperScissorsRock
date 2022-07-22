@@ -1,58 +1,39 @@
-Aim of the game:
+In our UI, the player should be able to play the game by clicking 
+on buttons rather than typing their answer in a prompt.
 
-Understand:
+For now, remove the logic that plays exactly five rounds.
 
-Create a skeleton html file with a link to the games js file.
+Create three buttons, one for each selection. 
+Add an event listener to the buttons 
+that call your playRound function with the correct playerSelection every time a button is clicked. 
+(you can keep the console.logs for this step)
+Add a div for displaying results and change all of your console.logs into DOM methods.
 
-Create a function that randomly returns paper scissors or rock, 
-check the output of this in the console.
+Display the running score, 
+and announce a winner of the game once one player reaches 5 points.
 
-Create a function that takes the players input (which should come from a prompt),
-and compares it to the computers input, 
-the computers input will be == to the previous functions return value,
-make sure this returns a statement declaring the winner.
+You will likely have to refactor (rework/rewrite) your original code to make it work for this. 
+That’s OK! Reworking old code is an important part of a programmer’s life.
+Once you’re all done with your UI and made sure everything’s satisfactory, 
+commit your changes to the rps-ui branch.
 
-Write a function that loops the previous function five times,
-this should keep a track of the outcome for each round and add up the over all winner,
-then return the statement of who has won the mount rounds out of five.
+html pseudo 
 
-Plan:
+html
+    head
+        title
+    head
 
-function computerPlay () {
-    options = {paper, scissors rock};
-    return random(options)
-}
-
-function oneRound() {
-    userPlay = prompt(please enter an option)
-    computerPlay == computerPlay();
-   if (userPlay == paper && computerPlay == rock || userPlay = scissors && computerPlay == paper || userPlay == rock && computerPlay == scissors) {
-        return "User wins"
-   } else {
-        return "Bad luck, computer wins"
-   }
-}
-
-
-
-function game() {
-    for (let i = 1; i < 5; i++) {
-        let result = oneRound();
-        let j = 0;
-        let k = 0;
-        if (result == "User wins") {
-            j++
-        } else {
-            k++
-        }
-    }
-
-    j > k? console.log(Yay you did it) : console.log(you suck);
-}
-
-Divide:
-
-sub problem 1 = how do I make a random string return in js? - solved using math.random to allocate random index.
-
-sub problem 2 = best way to compare user input with computer selection? - solved with if else statement from pseudocode
+    body
+        div class = wholePage
+            header
+            game message
+            score
+            div class = buttons
+                button
+                button
+                button
+            div
+    body
+html
 
