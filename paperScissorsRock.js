@@ -4,7 +4,7 @@ function computerPlay() {
 }
 
 function singleRound() {
-    let userChoice = prompt("Please enter rock, paper or scissors ").toLowerCase();
+    //let userChoice = prompt("Please enter rock, paper or scissors ").toLowerCase();
     let computerChoice = computerPlay();
 
     if (userChoice == "paper" && computerChoice == "rock" || 
