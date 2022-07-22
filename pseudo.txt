@@ -37,3 +37,11 @@ html
     body
 html
 
+javascript pseudo
+
+    define query selectors for paper, scissors & rock (or one querySelectAll the buttons div?)
+    listen for 'click' on any of the three - could be done using the nodelist?
+    compare the result of this with the existing computer choice value
+    use the same logic as before to define a winner
+    provide ability to itterate over this 5 times
+    announce final winner - logic should be the same as before
