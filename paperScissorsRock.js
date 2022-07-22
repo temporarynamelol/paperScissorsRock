@@ -4,7 +4,9 @@ function computerPlay() {
 }
 
 function singleRound() {
-    //let userChoice = prompt("Please enter rock, paper or scissors ").toLowerCase();
+    const paper = document.querySelector('#paper');
+    const scissors = document.querySelector('#scissors');
+    const rock = document.querySelector('#rock');
     let computerChoice = computerPlay();
 
     if (userChoice == "paper" && computerChoice == "rock" || 
