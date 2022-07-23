@@ -40,6 +40,14 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         singleRound(button.id.toLowerCase());
+        //determines winner out of 5
+        if(userScore == 5) {
+            alert("Yay you won");
+            return;
+        } else if (computerScore == 5) {
+            alert("Comp won");
+            return;
+        }
         console.log(`Your score = ${userScore}, Computer score = ${computerScore}`);
     });
 });
