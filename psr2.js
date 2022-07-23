@@ -1,3 +1,6 @@
+let computerScore = 0;
+let userScore = 0;
+
 //returns random computer choice
 function computerPlay() {
     let options = ["paper", "scissors", "rock"];
@@ -16,6 +19,7 @@ function singleRound(userInput) {
     userChoice == "rock" && computerChoice == "scissors" ||
     userChoice == "scissors" && computerChoice == "paper") {
         console.log(`Congratulations ${userChoice} beat ${computerChoice}!`);
+        userScore++;
         return "Win"    
     //determine tie
     } else if (computerChoice == userChoice) {
@@ -24,6 +28,7 @@ function singleRound(userInput) {
     //determines when user has not won or tied 
     } else {
         console.log(`Bad luck ${computerChoice} beat ${userChoice}`);
+        computerScore++;
         return "Lose";
     }
 
@@ -35,6 +40,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         singleRound(button.id.toLowerCase());
+        console.log(`Your score = ${userScore}, Computer score = ${computerScore}`);
     });
 });
 
