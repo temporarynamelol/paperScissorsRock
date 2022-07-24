@@ -18,14 +18,14 @@ function singleRound(userInput) {
     if (userChoice == "paper" && computerChoice == "rock" || 
     userChoice == "rock" && computerChoice == "scissors" ||
     userChoice == "scissors" && computerChoice == "paper") {
-        console.log(`Congratulations ${userChoice} beat ${computerChoice}!`);
+        currentGame(`Congratulations ${userChoice} beat ${computerChoice}!`);
         userScore++;  
     //determine tie
     } else if (computerChoice == userChoice) {
-        console.log("Tie! - No winner for this round");
+        currentGame("Tie! - No winner for this round");
     //determines when user has not won or tied 
     } else {
-        console.log(`Bad luck ${computerChoice} beat ${userChoice}`);
+        currentGame(`Bad luck ${computerChoice} beat ${userChoice}`);
         computerScore++;
     }
 
@@ -66,6 +66,12 @@ function scoreFields () {
     let comp = document.querySelector('.compScore');
     user.textContent = `Your Score: ${userScore}`;
     comp.textContent = `Computers score: ${computerScore}`;
+}
+
+//Displays win lose or tie for current round and why
+function currentGame (result) {
+    let currentMessage = document.querySelector('.currentPlay');
+    currentMessage.textContent = result;
 }
 
 //queries all buttons on page
