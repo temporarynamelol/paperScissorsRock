@@ -53,6 +53,13 @@ function playAgain() {
     });
 }
 
+function endMessage (result) {
+    message = document.querySelector('.endMessage');
+    para = document.createElement('p');
+    para.textContent = result;
+    message.appendChild(para);
+}
+
 //queries all buttons on page
 const buttons = document.querySelectorAll('button');
 //each time button is pushed, pass the value of the button to the singleRound function
@@ -61,12 +68,14 @@ buttons.forEach((button) => {
         singleRound(button.id.toLowerCase());
         //determines winner out of 5
         if(userScore == 5) {
-            alert("Yay you won");
+            const message = "You won";
+            endMessage(message);
             buttons.forEach((button) => {button.disabled = true});
             playAgain();
             return;
         } else if (computerScore == 5) {
-            alert("Comp won");
+            const message = "You lost :(";
+            endMessage(message);
             buttons.forEach((button) => {button.disabled = true});
             playAgain();
             return;
