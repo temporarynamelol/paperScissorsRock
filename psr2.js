@@ -35,10 +35,22 @@ function singleRound(userInput) {
 }
 
 function playAgain() {
+    //creates play again button
     const play = document.querySelector('.playAgain');
     const playBtn = document.createElement('button');
     playBtn.textContent = "Play again?";
     play.appendChild(playBtn);
+    //if users clicks play again button - 
+    playBtn.addEventListener('click', () => {
+        //reset scores
+        userScore = 0;
+        computerScore = 0;
+        //clear score feilds 
+        //unlock play buttons
+        buttons.forEach((button) => {button.disabled = false});
+        //remove play again button
+        play.removeChild(playBtn);
+    });
 }
 
 //queries all buttons on page
