@@ -46,6 +46,8 @@ function playAgain() {
         userScore = 0;
         computerScore = 0;
         //clear score feilds 
+        //clear end message
+        endMessage();
         //unlock play buttons
         buttons.forEach((button) => {button.disabled = false});
         //remove play again button
@@ -53,11 +55,9 @@ function playAgain() {
     });
 }
 
-function endMessage (result) {
-    message = document.querySelector('.endMessage');
-    para = document.createElement('p');
-    para.textContent = result;
-    message.appendChild(para);
+function endMessage (result = '') {
+    const message = document.querySelector('.endMessage');
+    message.textContent = result;
 }
 
 //queries all buttons on page
