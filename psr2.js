@@ -34,6 +34,8 @@ function singleRound(userInput) {
 
 }
 
+
+
 //queries all buttons on page
 const buttons = document.querySelectorAll('button');
 //each time button is pushed, pass the value of the button to the singleRound function
@@ -43,9 +45,11 @@ buttons.forEach((button) => {
         //determines winner out of 5
         if(userScore == 5) {
             alert("Yay you won");
+            buttons.forEach((button) => {button.disabled = true});
             return;
         } else if (computerScore == 5) {
             alert("Comp won");
+            buttons.forEach((button) => {button.disabled = true});
             return;
         }
         console.log(`Your score = ${userScore}, Computer score = ${computerScore}`);
