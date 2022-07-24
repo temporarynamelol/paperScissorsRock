@@ -34,7 +34,12 @@ function singleRound(userInput) {
 
 }
 
-
+function playAgain() {
+    const play = document.querySelector('.playAgain');
+    const playBtn = document.createElement('button');
+    playBtn.textContent = "Play again?";
+    play.appendChild(playBtn);
+}
 
 //queries all buttons on page
 const buttons = document.querySelectorAll('button');
@@ -46,10 +51,12 @@ buttons.forEach((button) => {
         if(userScore == 5) {
             alert("Yay you won");
             buttons.forEach((button) => {button.disabled = true});
+            playAgain();
             return;
         } else if (computerScore == 5) {
             alert("Comp won");
             buttons.forEach((button) => {button.disabled = true});
+            playAgain();
             return;
         }
         console.log(`Your score = ${userScore}, Computer score = ${computerScore}`);
