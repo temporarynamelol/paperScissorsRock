@@ -32,6 +32,8 @@ function singleRound(userInput) {
 }
 
 function playAgain() {
+    //remove outcome of last round
+    currentGame();
     //creates play again button
     const play = document.querySelector('.playAgain');
     const playBtn = document.createElement('button');
@@ -69,7 +71,7 @@ function scoreFields () {
 }
 
 //Displays win lose or tie for current round and why
-function currentGame (result) {
+function currentGame (result = '') {
     let currentMessage = document.querySelector('.currentPlay');
     currentMessage.textContent = result;
 }
