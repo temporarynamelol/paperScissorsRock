@@ -60,6 +60,14 @@ function endMessage (result = '') {
     message.textContent = result;
 }
 
+function scoreFields () {
+    let user = document.querySelector('.playerScore');
+    let comp = document.querySelector('.compScore');
+
+    user.textContent = `Your Score: ${userScore}`;
+    comp.textContent = `Computers score: ${computerScore}`;
+}
+
 //queries all buttons on page
 const buttons = document.querySelectorAll('button');
 //each time button is pushed, pass the value of the button to the singleRound function
@@ -80,6 +88,7 @@ buttons.forEach((button) => {
             playAgain();
             return;
         }
+        scoreFields();
         console.log(`Your score = ${userScore}, Computer score = ${computerScore}`);
     });
 });
