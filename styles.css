@@ -1,6 +1,15 @@
 .mainPage {
     display: flex;
-
     align-items: center;
     flex-direction: column;
+}
+
+.scoreBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.playerScore,
+.compScore {
+    padding: 18px;
 }
