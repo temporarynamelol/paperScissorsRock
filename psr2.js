@@ -19,17 +19,14 @@ function singleRound(userInput) {
     userChoice == "rock" && computerChoice == "scissors" ||
     userChoice == "scissors" && computerChoice == "paper") {
         console.log(`Congratulations ${userChoice} beat ${computerChoice}!`);
-        userScore++;
-        return "Win"    
+        userScore++;  
     //determine tie
     } else if (computerChoice == userChoice) {
         console.log("Tie! - No winner for this round");
-        return "Tie";
     //determines when user has not won or tied 
     } else {
         console.log(`Bad luck ${computerChoice} beat ${userChoice}`);
         computerScore++;
-        return "Lose";
     }
 
 }
@@ -46,6 +43,7 @@ function playAgain() {
         userScore = 0;
         computerScore = 0;
         //clear score feilds 
+        scoreFields();
         //clear end message
         endMessage();
         //unlock play buttons
@@ -55,15 +53,17 @@ function playAgain() {
     });
 }
 
+//adds whatever argument is supplied as a message on the screen, 
+//if no argument supplied, it removes the message
 function endMessage (result = '') {
     const message = document.querySelector('.endMessage');
     message.textContent = result;
 }
 
+//appends the current scores to the screen
 function scoreFields () {
     let user = document.querySelector('.playerScore');
     let comp = document.querySelector('.compScore');
-
     user.textContent = `Your Score: ${userScore}`;
     comp.textContent = `Computers score: ${computerScore}`;
 }
@@ -76,20 +76,23 @@ buttons.forEach((button) => {
         singleRound(button.id.toLowerCase());
         //determines winner out of 5
         if(userScore == 5) {
+            //sets end message to winner message
             const message = "You won";
             endMessage(message);
+            //locks play buttons
             buttons.forEach((button) => {button.disabled = true});
             playAgain();
             return;
         } else if (computerScore == 5) {
+            //sets end message to loser message
             const message = "You lost :(";
             endMessage(message);
+            //locks play buttons
             buttons.forEach((button) => {button.disabled = true});
             playAgain();
             return;
         }
         scoreFields();
-        console.log(`Your score = ${userScore}, Computer score = ${computerScore}`);
     });
 });
 
