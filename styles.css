@@ -5,12 +5,12 @@
 
 html {
     height: 100%;
-    background-image: linear-gradient(to top, #e52e71, #000066);
+    background-image: linear-gradient(to bottom, #2E2157, #F6019D);
 }
 
 .Logo {
     font-family: 'horseman';
-    color: white;
+    color: #F6019D;
     font-size: 50px;
 }
 .mainPage {
