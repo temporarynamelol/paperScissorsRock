@@ -3,12 +3,17 @@
     src: url(./fonts/Horsemen\ Typeface/OTF/Horsemen.otf);
 }
 
+@font-face {
+    font-family: 'CyberThrone';
+    src: url(./fonts/Cyberthrone.ttf);
+}
+
 html {
     height: 100%;
     background-image: linear-gradient(to bottom, #2E2157, #F6019D);
 }
 
-.Logo {
+#logo {
     font-family: 'horseman';
     color: #F6019D;
     font-size: 50px;
@@ -17,7 +22,12 @@ html {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: 'CyberThrone';
+    color: white;
+    font-weight: 200;
+    font-size: 42px;
 }
+
 
 .scoreBox {
     display: flex;
