@@ -43,10 +43,16 @@ html {
     margin: 8px;
 }
 
-.optionBtn {
-    width: 150px;
-    height: 190px;
+#P,
+#S,
+#R {
+    font-family: 'horseman';
+    font-size: 50px;
+    color: #FF6C11;
 }
 
-
+.buttons button {
+    all: unset;
+    padding: 75px;
+}
 
