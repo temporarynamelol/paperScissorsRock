@@ -1,6 +1,15 @@
 html {
     height: 100%;
-    background-image: linear-gradient(to bottom, #ff8a00, #e52e71);
+    background-image: linear-gradient(to top, #ff8a00, #e52e71);
+}
+
+@font-face {
+    src: url(./fonts/Road_Rage.otf);
+    font-family: 'road_rage';
+}
+
+.Logo {
+    font-family: 'road_rage';
 }
 .mainPage {
     display: flex;
