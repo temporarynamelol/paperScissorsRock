@@ -17,3 +17,10 @@
 .playAgain {
     margin: 8px;
 }
+
+.optionBtn {
+    width: 150px;
+    height: 190px;
+    background-color: palevioletred;
+}
+
