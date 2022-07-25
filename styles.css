@@ -1,6 +1,6 @@
 @font-face {
-    src: url(./fonts/Road_Rage.otf);
-    font-family: 'road_rage';
+    font-family: 'horseman';
+    src: url(./fonts/Horsemen\ Typeface/OTF/Horsemen.otf);
 }
 
 html {
@@ -9,9 +9,9 @@ html {
 }
 
 .Logo {
-    font-family: 'road_rage';
+    font-family: 'horseman';
     color: white;
-    font-size: 80px;
+    font-size: 50px;
 }
 .mainPage {
     display: flex;
