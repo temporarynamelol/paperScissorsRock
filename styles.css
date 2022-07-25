@@ -46,13 +46,28 @@ html {
 #P,
 #S,
 #R {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'horseman';
-    font-size: 50px;
+    font-size: 20px;
     color: #FF6C11;
+    padding: 16px;
+    background: #241734;
+    height: 75px;
+    width: 200px;
+}
+
+#P {
+    clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 100%, 80% 100%, 9.375% 100%, 0 75%, 0 0);
+}
+
+#R {
+    clip-path: polygon(15% 0%, 88.5% 0%, 100% 25%, 100% 100%, 85% 100%, 15% 100%, 0% 100%, 0% 0%);
 }
 
 .buttons button {
     all: unset;
-    padding: 75px;
+    margin: 4px;
 }
 
