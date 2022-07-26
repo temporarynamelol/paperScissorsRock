@@ -11,6 +11,13 @@
 html {
     height: 100%;
     background-image: linear-gradient(to bottom, #2E2157, #F6019D);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 #logo {
@@ -56,10 +63,13 @@ html {
     background: #241734;
     height: 75px;
     width: 200px;
+    cursor: pointer;
+    
 }
 
 #paper {
     clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 100%, 80% 100%, 9.375% 100%, 0 75%, 0 0);
+
 }
 
 #rock {
@@ -85,4 +95,5 @@ html {
     padding: 12px;
     background-color: #241734;
     border-radius: 8px;
+    cursor: pointer;
 }
