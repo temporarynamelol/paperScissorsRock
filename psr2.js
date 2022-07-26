@@ -58,8 +58,15 @@ function playAgain() {
 //adds whatever argument is supplied as a message on the screen, 
 //if no argument supplied, it removes the message
 function endMessage (result = '') {
-    const message = document.querySelector('.endMessage');
-    message.textContent = result;
+    if (result == "VICTORY") {
+        const message = document.querySelector('.winner');
+        message.textContent = result;
+    } else {
+        const message = document.querySelector('.loser');
+        message.textContent = result;
+    }
+    //const message = document.querySelector('.endMessage');
+    //message.textContent = result;
 }
 
 //appends the current scores to the screen
@@ -81,7 +88,7 @@ const buttons = document.querySelectorAll('button');
 //each time button is pushed, pass the value of the button to the singleRound function
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        singleRound(button.id.toUpperCase());
+        singleRound(button.id.toLowerCase());
         //determines winner out of 5
         if(userScore == 5) {
             //sets end message to winner message
