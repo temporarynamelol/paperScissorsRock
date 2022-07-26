@@ -38,6 +38,7 @@ function playAgain() {
     const play = document.querySelector('.playAgain');
     const playBtn = document.createElement('button');
     playBtn.textContent = "Play again?";
+    playBtn.setAttribute('id', 'playAgainBtn');
     play.appendChild(playBtn);
     //if users clicks play again button - 
     playBtn.addEventListener('click', () => {

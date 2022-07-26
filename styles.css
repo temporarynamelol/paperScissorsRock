@@ -66,7 +66,8 @@ html {
     clip-path: polygon(15% 0%, 88.5% 0%, 100% 25%, 100% 100%, 85% 100%, 15% 100%, 0% 100%, 0% 0%);
 }
 
-.buttons button {
+.buttons button,
+.playAgain button {
     all: unset;
     margin: 4px;
 }
@@ -77,3 +78,10 @@ html {
     font-size: 50px;
 }
 
+#playAgainBtn {
+    border: solid;
+    border-color: #FF6C11;
+    color: #FF6C11;
+    padding: 12px;
+    background-color: #241734;
+}
