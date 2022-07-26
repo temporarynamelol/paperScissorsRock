@@ -71,3 +71,9 @@ html {
     margin: 4px;
 }
 
+.endMessage {
+    margin: 16px;
+    font-family: 'horseman';
+    font-size: 50px;
+}
+

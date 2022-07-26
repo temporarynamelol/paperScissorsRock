@@ -58,13 +58,14 @@ function playAgain() {
 //adds whatever argument is supplied as a message on the screen, 
 //if no argument supplied, it removes the message
 function endMessage (result = '') {
+    let message = document.querySelector('.endMessage');
+
     if (result == "VICTORY") {
-        const message = document.querySelector('.winner');
-        message.textContent = result;
-    } else {
-        const message = document.querySelector('.loser');
-        message.textContent = result;
-    }
+        message.setAttribute('style', 'color:green;')
+    } else if (result == 'DESTROYED') {
+        message.setAttribute('style', 'color: red;')
+    } 
+    message.textContent = result;
     //const message = document.querySelector('.endMessage');
     //message.textContent = result;
 }
