@@ -81,11 +81,11 @@ const buttons = document.querySelectorAll('button');
 //each time button is pushed, pass the value of the button to the singleRound function
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        singleRound(button.id.toLowerCase());
+        singleRound(button.id.toUpperCase());
         //determines winner out of 5
         if(userScore == 5) {
             //sets end message to winner message
-            const message = "You won";
+            const message = "VICTORY";
             endMessage(message);
             //locks play buttons
             buttons.forEach((button) => {button.disabled = true});
@@ -93,7 +93,7 @@ buttons.forEach((button) => {
             return;
         } else if (computerScore == 5) {
             //sets end message to loser message
-            const message = "You lost :(";
+            const message = "DESTROYED";
             endMessage(message);
             //locks play buttons
             buttons.forEach((button) => {button.disabled = true});
