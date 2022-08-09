@@ -11,6 +11,9 @@
 html {
     height: 100%;
     background-image: linear-gradient(to bottom, #2E2157, #F6019D);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
